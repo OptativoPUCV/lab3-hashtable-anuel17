@@ -54,7 +54,7 @@ void insertMap(HashMap * map, char * key, void * value){
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
-  struct Pair* bucketsO = map->buckets;
+  struct Pair** bucketsO = map->buckets;
   map->capacity *= 2;
   map->buckets= (struct Pair**)malloc(sizeof(struct Pair *)* map->capacity);
   map->size = 0;

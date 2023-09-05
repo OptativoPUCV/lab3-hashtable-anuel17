@@ -847,3 +847,9 @@ hashmap.c:62:32: error: incompatible types when initializing type ‘struct Pair
 cc1: all warnings being treated as errors
 Compilation failed
 a816a84
+Tue 05 Sep 2023 10:22:44 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+33c674c
