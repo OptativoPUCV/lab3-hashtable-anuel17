@@ -29,3 +29,39 @@ hashmap.c:66:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 9f1b4af
+Tue 05 Sep 2023 02:31:53 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:59:15: error: ‘size’ undeclared (first use in this function)
+   59 |   map->size = size;
+      |               ^~~~
+hashmap.c:59:15: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:60:6: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘cubes’
+   60 |   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
+      |      ^~
+hashmap.c:60:17: error: ‘Cube’ undeclared (first use in this function)
+   60 |   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
+      |                 ^~~~
+hashmap.c:60:22: error: expected expression before ‘)’ token
+   60 |   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
+      |                      ^
+hashmap.c:61:10: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘cubes’
+   61 |   if (map->cubes == NULL) {
+      |          ^~
+hashmap.c:65:6: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘currentIndex’
+   65 |   map->currentIndex = -1
+      |      ^~
+hashmap.c:65:25: error: expected ‘;’ before ‘return’
+   65 |   map->currentIndex = -1
+      |                         ^
+      |                         ;
+   66 |   return map;
+      |   ~~~~~~                 
+hashmap.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+   67 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+257b2ec
