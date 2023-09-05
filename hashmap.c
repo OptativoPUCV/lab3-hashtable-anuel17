@@ -53,14 +53,11 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) {
   HashMap* map = (HashMap*)malloc(sizeof(HashMap));
-  if (map == NULL) {
-    exit(1); 
-  }
   map->size = size;
   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
   if (map->cubes == NULL) {
-    free(map); 
-    exit(1);   
+    free(map);
+    exit(1);
   }
   map->currentIndex = -1;
   return map;
