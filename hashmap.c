@@ -58,7 +58,12 @@ void enlarge(HashMap * map) {
   map->capacity =* 2;
   map->buckets= (struct Pair**)malloc(sizeof(struct Pair *)* map->capacity);
   map->size = 0;
-  
+  for(int i = 0; i < map->capacity/2;i++){
+    struct Pair* currentpair = bucketsO[i]
+    if(currentPair != NULL && currentPair->key != NULL){
+      insertMap(map,currentPair->key,currentPair->value);
+    }
+  }
 }
 
 
