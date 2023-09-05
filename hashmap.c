@@ -126,6 +126,12 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
-    return NULL;
+  for(long i = 0; i < map->capacity;i++){
+    struct Pair* currentpair = map->buckets[i];
+    if(currentpair != NULL && currentpair->key != NULL){
+      map->current = i;
+      return currentpair;
+    }
+  }
+  return NULL;
 }
