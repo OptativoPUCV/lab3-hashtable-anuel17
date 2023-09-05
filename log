@@ -791,3 +791,28 @@ hashmap.c:57:15: error: variable ‘bucketsO’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 906318c
+Tue 05 Sep 2023 10:21:51 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:27: error: initialization of ‘struct Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   57 |   struct Pair* bucketsO = map->buckets;
+      |                           ^~~
+hashmap.c:58:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+   58 |   map->capacity =* 2;
+      |                  ^~~
+hashmap.c:62:32: error: incompatible types when initializing type ‘struct Pair *’ using type ‘struct Pair’
+   62 |     struct Pair* currentpair = bucketsO[i];
+      |                                ^~~~~~~~
+hashmap.c:63:8: error: ‘currentPair’ undeclared (first use in this function); did you mean ‘currentpair’?
+   63 |     if(currentPair != NULL && currentPair->key != NULL){
+      |        ^~~~~~~~~~~
+      |        currentpair
+hashmap.c:63:8: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:62:18: error: unused variable ‘currentpair’ [-Werror=unused-variable]
+   62 |     struct Pair* currentpair = bucketsO[i];
+      |                  ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+acc0acc
