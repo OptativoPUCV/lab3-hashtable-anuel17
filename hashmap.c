@@ -84,7 +84,7 @@ void eraseMap(HashMap * map,  char * key) {
     int index = (hash(key,map->capacity)+i) %map->capacity
     struct Pair* currentpair = map->buckets[indice];
     if(currentpair = NULL){
-      map->current = -1
+      map->current = -1;
       return;
     }
     if(strcmp(currentpair->key, key) == 0)){
