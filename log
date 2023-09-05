@@ -737,3 +737,29 @@ hashmap.c:57:15: error: variable ‘bucketsO’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 29bb197
+Tue 05 Sep 2023 10:21:24 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:26: error: invalid initializer
+   57 |   struct Pair bucketsO = map->buckets;
+      |                          ^~~
+hashmap.c:58:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+   58 |   map->capacity =* 2;
+      |                  ^~~
+hashmap.c:62:40: error: subscripted value is neither array nor pointer nor vector
+   62 |     struct Pair* currentpair = bucketsO[i]
+      |                                        ^
+hashmap.c:63:5: error: expected ‘,’ or ‘;’ before ‘if’
+   63 |     if(currentPair != NULL && currentPair->key != NULL){
+      |     ^~
+hashmap.c:62:18: error: unused variable ‘currentpair’ [-Werror=unused-variable]
+   62 |     struct Pair* currentpair = bucketsO[i]
+      |                  ^~~~~~~~~~~
+hashmap.c:57:15: error: variable ‘bucketsO’ set but not used [-Werror=unused-but-set-variable]
+   57 |   struct Pair bucketsO = map->buckets;
+      |               ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c17641c
