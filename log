@@ -833,3 +833,17 @@ hashmap.c:62:32: error: incompatible types when initializing type ‘struct Pair
 cc1: all warnings being treated as errors
 Compilation failed
 c292057
+Tue 05 Sep 2023 10:22:32 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:27: error: initialization of ‘struct Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   57 |   struct Pair* bucketsO = map->buckets;
+      |                           ^~~
+hashmap.c:62:32: error: incompatible types when initializing type ‘struct Pair *’ using type ‘struct Pair’
+   62 |     struct Pair* currentpair = bucketsO[i];
+      |                                ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a816a84
