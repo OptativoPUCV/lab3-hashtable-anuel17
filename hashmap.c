@@ -97,6 +97,8 @@ Pair * searchMap(HashMap * map,  char * key) {
       return currentPair;
     }
   }
+  map->current = -1;
+  
 }
 
 Pair * firstMap(HashMap * map) {
