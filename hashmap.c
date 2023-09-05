@@ -57,7 +57,7 @@ void enlarge(HashMap * map) {
   struct Pair bucketsO = map->buckets;
   map->capacity =* 2:
   map->buckets= (struct Pair**)malloc(sizeof(struct Pair *)* map->capacity);
-  map-size = 0;
+  map->size = 0;
   
 }
 
