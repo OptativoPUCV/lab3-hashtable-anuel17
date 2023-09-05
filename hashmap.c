@@ -40,9 +40,6 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value){
-  if(map == NULL || key == NULL){
-    return;
-  }
   for(long i = 0; i < map->capacity; i++){
     long index = (hash(key, map->capacity) + i) % map->capacity;
     struct Pair *currentPair = map->buckets[index];
