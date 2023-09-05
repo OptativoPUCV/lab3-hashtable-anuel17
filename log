@@ -570,3 +570,17 @@ hashmap.c:119:8: error: ‘currentpair’ undeclared (first use in this function
       |        ^~~~~~~~~~~
 Compilation failed
 b2939e9
+Tue 05 Sep 2023 10:06:23 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:117:38: error: expected expression before ‘)’ token
+  117 |   for(int i = 0; i < map->capacity;i+){
+      |                                      ^
+hashmap.c:119:8: error: ‘currentpair’ undeclared (first use in this function)
+  119 |     if(currentpair != NULL || currentpair->key != NULL){
+      |        ^~~~~~~~~~~
+hashmap.c:119:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d682c42
