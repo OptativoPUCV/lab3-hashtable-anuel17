@@ -612,3 +612,9 @@ hashmap.c:119:8: error: ‘currentpair’ undeclared (first use in this function
 hashmap.c:119:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 359ccff
+Tue 05 Sep 2023 10:08:19 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  13|2
+total_score: 50/70
+78c9bf0
