@@ -79,9 +79,21 @@ HashMap * createMap(long capacity) {
   return map;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
-
+void eraseMap(HashMap * map,  char * key) {
+  for(i = 0; i < map->capacity;i++){
+    int index = (hash(key,map->capacity)+i) %map->capacity
+    struct Pair* currentpair = map->buckets[indice];
+    if(currentpair = NULL){
+      map->current = -1
+      return;
+    }
+    if(strcmp(currentpair->key, key) == 0)){
+      currentpair->key = NULL;
+      map->size--;
+      map->current = indice;
+      return;
+    }
+  }
 }
 
 Pair * searchMap(HashMap * map,  char * key) {

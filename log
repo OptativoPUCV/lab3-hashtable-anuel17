@@ -356,3 +356,42 @@ Tue 05 Sep 2023 02:59:56 AM UTC:
  tests:  8|3
 total_score: 40/70
 a7fba0e
+Tue 05 Sep 2023 09:56:41 PM UTC: 
+ hashmap.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:83:7: error: ‘i’ undeclared (first use in this function)
+   83 |   for(i = 0; i < map->capacity;i++){
+      |       ^
+hashmap.c:83:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:85:5: error: expected ‘,’ or ‘;’ before ‘struct’
+   85 |     struct Pair* currentpair = map->buckets[indice];
+      |     ^~~~~~
+hashmap.c:86:8: error: ‘currentpair’ undeclared (first use in this function)
+   86 |     if(currentpair = NULL){
+      |        ^~~~~~~~~~~
+hashmap.c:87:24: error: expected ‘;’ before ‘return’
+   87 |       map->current = -1
+      |                        ^
+      |                        ;
+   88 |       return;
+      |       ~~~~~~            
+hashmap.c:90:43: error: expected statement before ‘)’ token
+   90 |     if(strcmp(currentpair->key, key) == 0)){
+      |                                           ^
+hashmap.c:90:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   90 |     if(strcmp(currentpair->key, key) == 0)){
+      |     ^~
+hashmap.c:90:44: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   90 |     if(strcmp(currentpair->key, key) == 0)){
+      |                                            ^
+hashmap.c:93:22: error: ‘indice’ undeclared (first use in this function)
+   93 |       map->current = indice;
+      |                      ^~~~~~
+hashmap.c:84:9: error: unused variable ‘index’ [-Werror=unused-variable]
+   84 |     int index = (hash(key,map->capacity)+i) %map->capacity
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f12198e
