@@ -178,3 +178,9 @@ hashmap.c:43:21: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 3c6bcb2
+Tue 05 Sep 2023 02:48:48 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+c5b8b56
