@@ -88,7 +88,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   for (long i = 0; i < map->capacity; i++) {
     long index = (hash(key, map->capacity) + i) % map->capacity;
     struct Pair *currentPair = map->buckets[index];
-    if(strcmp(currentPair->ke, key) == 0){
+    if(strcmp(currentPair->key, key) = 0){
       map->current = index;
       return currentPair;
     }
