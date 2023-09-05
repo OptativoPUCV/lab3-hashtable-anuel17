@@ -242,3 +242,18 @@ hashmap.c:99:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 a4483dc
+Tue 05 Sep 2023 02:57:50 AM UTC: 
+ hashmap.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:91:28: error: ‘struct Pair’ has no member named ‘ke’; did you mean ‘key’?
+   91 |     if(strcmp(currentPair->ke, key) == 0){
+      |                            ^~
+      |                            key
+hashmap.c:96:1: error: control reaches end of non-void function [-Werror=return-type]
+   96 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3a110e1
