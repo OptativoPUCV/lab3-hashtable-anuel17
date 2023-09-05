@@ -133,5 +133,6 @@ Pair * nextMap(HashMap * map) {
       return currentpair;
     }
   }
+  map->current = -1;
   return NULL;
 }
