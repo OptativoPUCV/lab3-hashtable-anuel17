@@ -87,13 +87,13 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {
   for (long i = 0; i < map->buckets; i++) {
     long index = (hash(key, map->capacity) + i) % map->capacity;
-    struct Pair *currentPair = map->buckets[index]
+    struct Pair *currentPair = map->buckets[index];
     if (currentPair == NULL){
       map->current = -1;
     }
     if(strcmp(currentPair->key, key) == 0){
       map->current = index;
-      return currentPair
+      return currentPair;
     }
   }
 }
