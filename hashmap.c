@@ -39,9 +39,17 @@ int is_equal(void* key1, void* key2){
 }
 
 
-void insertMap(HashMap * map, char * key, void * value) {
-
-
+void insertMap(HashMap * map, char * key, void * value){
+  for(long i = 0; i < map->capacity; i++){
+    long index = (hash(key, map->capacity) + i) % map->capacity;
+    struct Pair *currentPair = map->buckets[index];
+    if (currentPair == NULL) {
+      map->buckets[index] = createPair(key, value);
+      map->current = index;
+      map->size++;
+      return;
+    }
+  }
 }
 
 void enlarge(HashMap * map) {
