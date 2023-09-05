@@ -116,7 +116,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
   for(int i = 0; i < map->capacity;i+){
     struct Pair* currentpair = map->buckets[i];
-    if(currentpair != NULL || currentpair->key != NULL){
+    if(currentpair != NULL && currentpair->key != NULL){
       map->current = i;
       return currentpair;
     }
