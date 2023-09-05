@@ -428,3 +428,33 @@ hashmap.c:84:9: error: unused variable ‘index’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 e6515a3
+Tue 05 Sep 2023 09:56:59 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:83:7: error: ‘i’ undeclared (first use in this function)
+   83 |   for(i = 0; i < map->capacity;i++){
+      |       ^
+hashmap.c:83:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:85:45: error: ‘indice’ undeclared (first use in this function)
+   85 |     struct Pair* currentpair = map->buckets[indice];
+      |                                             ^~~~~~
+hashmap.c:86:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   86 |     if(currentpair = NULL){
+      |        ^~~~~~~~~~~
+hashmap.c:90:43: error: expected statement before ‘)’ token
+   90 |     if(strcmp(currentpair->key, key) == 0)){
+      |                                           ^
+hashmap.c:90:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   90 |     if(strcmp(currentpair->key, key) == 0)){
+      |     ^~
+hashmap.c:90:44: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   90 |     if(strcmp(currentpair->key, key) == 0)){
+      |                                            ^
+hashmap.c:84:9: error: unused variable ‘index’ [-Werror=unused-variable]
+   84 |     int index = (hash(key,map->capacity)+i) %map->capacity;
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5ba3555
