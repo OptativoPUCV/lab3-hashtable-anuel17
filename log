@@ -2,3 +2,30 @@ Tue 05 Sep 2023 02:11:42 AM UTC:
  tests:  0|6
 total_score: 0/70
 e374038
+Tue 05 Sep 2023 02:31:41 AM UTC: 
+ hashmap.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:59:15: error: ‘size’ undeclared (first use in this function)
+   59 |   map->size = size;
+      |               ^~~~
+hashmap.c:59:15: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:60:6: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘cubes’
+   60 |   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
+      |      ^~
+hashmap.c:60:17: error: ‘Cube’ undeclared (first use in this function)
+   60 |   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
+      |                 ^~~~
+hashmap.c:60:22: error: expected expression before ‘)’ token
+   60 |   map->cubes = (Cube*)malloc(sizeof(Cube) * size);
+      |                      ^
+hashmap.c:61:10: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘cubes’
+   61 |   if (map->cubes == NULL) {
+      |          ^~
+hashmap.c:66:1: error: control reaches end of non-void function [-Werror=return-type]
+   66 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9f1b4af
