@@ -81,8 +81,8 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {
   for(int i = 0; i < map->capacity;i++){
-    int indice = (hash(key,map->capacity)+i) %map->capacity;
-    struct Pair* currentpair = map->buckets[indice];
+    int index = (hash(key,map->capacity)+i) %map->capacity;
+    struct Pair* currentpair = map->buckets[index];
     if(currentpair == NULL){
       map->current = -1;
       return;
@@ -90,7 +90,7 @@ void eraseMap(HashMap * map,  char * key) {
     if(strcmp(currentpair->key, key) == 0){
       currentpair->key = NULL;
       map->size--;
-      map->current = indice;
+      map->current = index;
       return;
     }
   }
