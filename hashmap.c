@@ -60,8 +60,8 @@ void enlarge(HashMap * map) {
   map->size = 0;
   for(long i = 0; i < map->capacity/2;i++){
     struct Pair* currentpair = bucketsO[i];
-    if(currentPair != NULL && currentPair->key != NULL){
-      insertMap(map,currentPair->key,currentPair->value);
+    if(currentpair != NULL && currentpair->key != NULL){
+      insertMap(map,currentpair->key,currentpair->value);
     }
   }
 }

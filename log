@@ -816,3 +816,20 @@ hashmap.c:62:18: error: unused variable ‘currentpair’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 acc0acc
+Tue 05 Sep 2023 10:22:17 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:27: error: initialization of ‘struct Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   57 |   struct Pair* bucketsO = map->buckets;
+      |                           ^~~
+hashmap.c:58:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+   58 |   map->capacity =* 2;
+      |                  ^~~
+hashmap.c:62:32: error: incompatible types when initializing type ‘struct Pair *’ using type ‘struct Pair’
+   62 |     struct Pair* currentpair = bucketsO[i];
+      |                                ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c292057
